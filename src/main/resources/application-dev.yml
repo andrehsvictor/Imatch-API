@@ -3,3 +3,11 @@ spring:
     compose:
       enabled: true
       file: docker-compose.dev.yml
+
+  data:
+    mongodb:
+      username: ${MONGO_USERNAME:-mongo}
+      password: ${MONGO_PASSWORD:-mongo}
+      database: ${MONGO_DB:-imatch}
+      host: ${MONGO_HOST:-localhost}
+      port: ${MONGO_PORT:-27017}
