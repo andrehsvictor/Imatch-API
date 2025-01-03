@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: imatch
+  threads:
+    virtual:
+      enabled: true
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:prod}
